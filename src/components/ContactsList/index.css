@@ -1,0 +1,23 @@
+.section-header {
+    font-size: 22px;
+    font-weight: 600;
+    color: #4a4e7c;
+}
+
+th {
+    color: #c5cacd;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.controllers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}

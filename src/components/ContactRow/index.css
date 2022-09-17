@@ -1,0 +1,73 @@
+.active-row {
+    background-color: rgba(248,241,248,255);
+}
+
+.action-button {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #d5d6da;
+}
+
+td {
+    font-weight: 600;
+    color: #686b72;
+}
+
+.active-button {
+    background-color: white;
+    color: #858aaa;
+}
+
+.contact-name {
+    margin: 0px;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+.place-name {
+    font-size: 13px;
+    margin: 0px;
+}
+
+.profile-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
+
+.tags-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.tag {
+    font-size: 12px;
+    margin: 0px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.CLIENT {
+    color: #484886;
+    background-color: #dbdbf4;
+}
+
+.WORKSHOP {
+    color: #7bb19c;
+    background-color: #d5f0e7;
+}
+
+.INTERNAL {
+    color: #daadbe;
+    background-color: #f2e1e9;
+}
+
+.BOARD {
+    color: #9da4ae;
+    background-color: #eeeef2;
+}
