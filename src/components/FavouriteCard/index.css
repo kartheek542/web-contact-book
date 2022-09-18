@@ -6,7 +6,7 @@
 
 .favourite-head-container {
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #bbbdbf;
     padding: 10px;
 }
 
