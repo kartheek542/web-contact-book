@@ -65,12 +65,12 @@ const favouriteContacts = [
 class Favourites extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       slidesToShow: 4,
       slidesToScroll: 3,
     }
     return (
-      <div>
+      <div className="favourite-section-container">
         <h1 className="section-header">Favourite</h1>
         <div className="slider-container">
         <Slider {...settings}>

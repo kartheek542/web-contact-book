@@ -1,0 +1,49 @@
+.fav-contact-container {
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.favourite-head-container {
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.names-container {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.star-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star-background {
+    background-color: #f3fafa;
+    color: #b2bfca;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meta-container {
+    padding: 10px;
+}
+
+.buttons-container {
+    /* padding: 10px; */
+    padding-bottom: 10px;
+}
+
+.status-text, .location-text {
+    margin: 0px;
+    font-weight: 600;
+    color: #64676f;
+}

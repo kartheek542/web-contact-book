@@ -1,4 +1,10 @@
 .slider-container {
-    background-color: pink;
-    padding: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.slick-prev:before, .slick-next:before {
+    color: black;
+}
+.favourite-section-container {
+    margin-bottom: 40px;
 }

@@ -5,10 +5,12 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Favourites />
-      <ContactsList />
+    <div className="app-container">
+      <div>
+        <Header />
+        <Favourites />
+        <ContactsList />
+      </div>
     </div>
   );
 }
