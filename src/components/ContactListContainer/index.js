@@ -473,6 +473,13 @@ class ContactListContainer extends Component {
       this.setState((prevState) => ({ pageNo: prevState.pageNo + 1 }));
     }
   };
+  
+  onDeleteContact = (id) => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(eachContact => eachContact.id !== id)
+    }))
+  }
+  
   render() {
     const { pageNo, contacts } = this.state;
     return (
@@ -487,7 +494,7 @@ class ContactListContainer extends Component {
             <div>
               <h1 className="section-header">Contacts list</h1>
               <div>
-                  <ContactsList contacts={filteredContacts} page={pageNo} />
+                  <ContactsList contacts={filteredContacts} page={pageNo} deleteContact={this.onDeleteContact} />
                 {totalPages > 0 && (
                   <div className="bottom-container">
                     <button

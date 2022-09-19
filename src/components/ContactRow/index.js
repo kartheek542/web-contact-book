@@ -1,5 +1,6 @@
 import { Component } from "react";
 import {BiMessage, BiPhoneCall} from "react-icons/bi"
+import {ImBin} from 'react-icons/im'
 import "./index.css";
 
 class ContactRow extends Component {
@@ -15,6 +16,9 @@ class ContactRow extends Component {
 
   setPassive = () => {
     this.setState({hover: false})
+  }
+  onDeleteContact = () => {
+    this.props.removeContact(this.props.contactDetails.id)
   }
 
   render() {
@@ -59,6 +63,9 @@ class ContactRow extends Component {
               Call
             </button>
           </div>
+        </td>
+        <td>
+          <button className="btn delete-button" onClick={this.onDeleteContact}><ImBin className="delete-icon"/></button>
         </td>
       </tr>
     );

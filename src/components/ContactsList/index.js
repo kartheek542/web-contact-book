@@ -2,9 +2,8 @@ import ContactRow from "../ContactRow";
 import "./index.css";
 
 const ContactsList = (props) => {
-  const { contacts, page } = props;
+  const { contacts, page, deleteContact } = props;
   const requiredContacts = contacts.slice((page - 1) * 5, page * 5);
-  console.log(requiredContacts);
   if (requiredContacts.length > 0) {
     return (
       <table className="table">
@@ -16,11 +15,12 @@ const ContactsList = (props) => {
             <th>LOCATION</th>
             <th>TAGS</th>
             <th>ACTIONS</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           {requiredContacts.map((eachContact) => (
-            <ContactRow key={eachContact.id} contactDetails={eachContact} />
+            <ContactRow key={eachContact.id} contactDetails={eachContact} removeContact={deleteContact} />
           ))}
         </tbody>
       </table>

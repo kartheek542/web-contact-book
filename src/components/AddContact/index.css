@@ -1,0 +1,65 @@
+.add-contact-container {
+    background-color: #edeffc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 25%;
+}
+
+.element-container {
+    margin-bottom: 20px;
+}
+
+.form-heading {
+    text-align: center;
+    font-weight: bold;
+}
+
+.checkboxes-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.checkbox-container {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    margin: 2px;
+}
+
+.checkbox-label {
+    margin: 0;
+    margin-left: 2px;
+}
+
+.error-message {
+    color: red;
+    font-size: 13px;
+}
+
+.tick {
+    width: 100px;
+    height: 100px;
+
+}
+
+.success-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-heading {
+    text-align: center;
+    font-size: 25px;
+
+
+}

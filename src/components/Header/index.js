@@ -7,7 +7,7 @@ import WithRouter from "../WithRouter"
 
 class Header extends Component {
   onClickAddContact = () => {
-    this.props.navigate('/contacts/10')
+    this.props.navigate('/contacts/add')
   }
   render() {
     return (

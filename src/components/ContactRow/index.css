@@ -71,3 +71,7 @@ td {
     color: #9da4ae;
     background-color: #eeeef2;
 }
+
+.delete-button {
+    background-color: lightcoral;
+}
