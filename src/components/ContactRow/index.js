@@ -20,7 +20,7 @@ class ContactRow extends Component {
   render() {
     const { hover } = this.state;
     const { contactDetails } = this.props;
-    const { name, place, status, location, tags } = contactDetails;
+    const { name, place, status, location, tags} = contactDetails;
     const buttonClassName = hover
       ? "btn action-button active-button"
       : "btn action-button inactive-button";

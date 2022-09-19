@@ -1,7 +1,5 @@
-import { Component } from "react";
-import ContactsList from "../ContactsList";
-import SearchContext from "../../context/SearchContext";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import {Component} from 'react';
+
 
 let names = [
   {
@@ -456,64 +454,29 @@ let names = [
   },
 ];
 
-class ContactListContainer extends Component {
+class ContactDetails extends Component {
   state = {
-    pageNo: 1,
-    contacts: names,
+    contactId: "",
   };
-  onClickLeft = () => {
-    const { pageNo } = this.state;
-    if (pageNo !== 1) {
-      this.setState((prevState) => ({ pageNo: prevState.pageNo - 1 }));
-    }
-  };
-  onClickRight = () => {
-    const { pageNo } = this.state;
-    if (pageNo !== 10) {
-      this.setState((prevState) => ({ pageNo: prevState.pageNo + 1 }));
-    }
+  componentDidMount() {
+    this.getContactDetails();
+  }
+  getContactDetails = async () => {
+    const { match } = this.props;
+    const { params } = match;
+    const { id } = params;
+    const intId = parseInt(id);
+    const contacts = names.filter(eachContact => eachContact.id === intId)
+    this.setState({...contacts[0]});
   };
   render() {
-    const { pageNo, contacts } = this.state;
+    const {name} = this.state;
     return (
-      <SearchContext.Consumer>
-        {(value) => {
-          const { searchInput } = value;
-          const filteredContacts = contacts.filter((eachContact) =>
-            eachContact.name.toLowerCase().includes(searchInput.toLowerCase())
-          );
-          const totalPages = Math.ceil(filteredContacts.length / 5);
-          return (
-            <div>
-              <h1 className="section-header">Contacts list</h1>
-              <div>
-                  <ContactsList contacts={filteredContacts} page={pageNo} />
-                {totalPages > 0 && (
-                  <div className="bottom-container">
-                    <button
-                      className="btn controllers"
-                      type="button"
-                      onClick={this.onClickLeft}
-                    >
-                      <AiOutlineLeft />
-                    </button>
-                    Page {pageNo} of {totalPages}
-                    <button
-                      className="btn controllers"
-                      type="button"
-                      onClick={this.onClickRight}
-                    >
-                      <AiOutlineRight />
-                    </button>
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        }}
-      </SearchContext.Consumer>
+      <div>
+        <h1>This is Contact details of {name}</h1>
+      </div>
     );
   }
 }
 
-export default ContactListContainer;
+export default ContactDetails;

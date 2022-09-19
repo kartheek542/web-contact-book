@@ -3,8 +3,12 @@ import SearchContext from "../../context/SearchContext";
 import { BiFilter } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
 import "./index.css";
+import WithRouter from "../WithRouter"
 
 class Header extends Component {
+  onClickAddContact = () => {
+    this.props.navigate('/contacts/10')
+  }
   render() {
     return (
         <SearchContext.Consumer>
@@ -19,6 +23,7 @@ class Header extends Component {
                         <button
                           className="btn btn-danger header-buttons shadow add-contact-button"
                           type="button"
+                          onClick={this.onClickAddContact}
                         >
                           ADD CONTACT
                         </button>
@@ -53,4 +58,4 @@ class Header extends Component {
     );
   }
 }
-export default Header;
+export default WithRouter(Header);
