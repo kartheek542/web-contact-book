@@ -1,17 +1,8 @@
-import Header from "./components/Header"
-import Favourites from "./components/Favourites";
-import ContactsList from "./components/ContactsList";
-import './App.css';
+import ContactApp from "./components/ContactApp";
 
 function App() {
   return (
-    <div className="app-container">
-      <div>
-        <Header />
-        <Favourites />
-        <ContactsList />
-      </div>
-    </div>
+    <ContactApp />
   );
 }
 
